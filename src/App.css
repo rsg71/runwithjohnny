@@ -1,0 +1,176 @@
+/* .App {
+  text-align: center;
+} */
+
+html, body {
+  min-height: 100vh;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* .App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+} */
+
+.font-smaller {
+  font-size: smaller;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 2s;
+}
+
+.jumbotron {
+  border-radius: 0 !important;
+  /* background-color:whitesmoke; */
+  background-image: url("../public/imgs/portfolio_background_colors_blue.jpg");
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: 'Bungee Shade', cursive;
+}
+
+
+.iamYam {
+  font-family: 'Cormorant SC', serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.image__description {
+  font-size: small;
+}
+
+a.noUnderLine {
+  text-decoration: none;
+}
+
+.underline-red {
+  border-bottom: 3px solid rgb(204, 16, 16);
+}
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+/* ============================================================== */
+/* media queries */
+/* ============================================================== */
+
+@media all and (max-width: 1200px) {
+  .appContainer {
+    max-width: 70% !important;
+  }
+}
+
+@media all and (max-width: 768px) {
+
+  #resumeContainer {
+    max-width: 70% !important;
+  }
+
+
+  .columnMargin {
+    margin-bottom: 1em
+  }
+}
+
+@media all and (min-width: 768px) {
+  /* .contactContainer {
+      max-width: 50%;
+  } */
+
+}
+
+@media all and (max-width: 576px) {
+
+  .appContainer {
+    max-width: 72% !important;
+  }
+
+  .myContainer {
+    width: 85% !important;
+  }
+
+  .jumbotron h1 {
+    font-size: 3rem;
+  }
+
+  #restaurantFinder {
+    margin-bottom: 1.45rem;
+  }
+
+  .devicon-javascript-plain {
+    font-size: 2.3rem;
+  }
+
+  .carousel-inner img {
+    height: 30vh;
+  }
+
+  .card img {
+    height: 30vh;
+  }
+
+  .footer {
+    height: 30vh;
+  }
+
+  .footerContact {
+    height: 25vh;
+  }
+
+  .footer p {
+    font-size: 10px;
+  }
+
+  .fluidFooter h5 {
+    padding-bottom: 6px;
+  }
+
+  #resumeContainer {
+    width: 100%;
+    max-width: 100% !important;
+  }
+
+  .contactContainer {
+    min-height: 675px
+  }
+
+  #contactSubmitBtn, #contactSendingBtn, #contactSubmittedBtn {
+    width: 100%;
+    margin-bottom: 30%;
+
+  }
+
+}

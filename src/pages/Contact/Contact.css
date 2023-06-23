@@ -1,0 +1,74 @@
+/* ============================================================== */
+/* contact */
+/* ============================================================== */
+/* .contactContainer {
+    text-align: center;
+} */
+
+.contactContainer .col {
+    font-size: 1.4rem;
+}
+
+.fa-phone-alt {
+    font-size: 2.1rem;
+}
+
+.col-md {
+    margin-bottom: 3rem;
+}
+
+.contact a {
+    text-decoration: none;
+}
+
+.contactEmailPhone {
+    margin-bottom: 30px
+}
+
+.contactEmailPhone a {
+    font-size: 1.2rem;
+}
+
+.sendingForm {
+    background-color: #16191c !important;
+}
+
+/* 
+#contactToast {
+    z-index: 5000;
+} */
+
+
+
+
+.greenBadge {
+    color: #00c9a7;
+    background-color: rgba(0, 201, 167, .1);
+}
+
+
+@media all and (max-width: 2600px) {
+    .homeContainer {
+        max-width: 80% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .paddingContact {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+}
+
+@media all and (max-width: 576px) {
+    .homeContainer {
+        min-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .paddingContact{ 
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
