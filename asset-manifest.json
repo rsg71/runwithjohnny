@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/runwithjohnny/static/css/main.230654f6.css",
-    "main.js": "/runwithjohnny/static/js/main.1154a698.js",
+    "main.js": "/runwithjohnny/static/js/main.95a7a5a2.js",
     "static/js/787.f069a600.chunk.js": "/runwithjohnny/static/js/787.f069a600.chunk.js",
     "static/media/portfolio_background_colors_blue.jpg": "/runwithjohnny/static/media/portfolio_background_colors_blue.2d7871db892f90578f21.jpg",
     "index.html": "/runwithjohnny/index.html",
     "main.230654f6.css.map": "/runwithjohnny/static/css/main.230654f6.css.map",
-    "main.1154a698.js.map": "/runwithjohnny/static/js/main.1154a698.js.map",
+    "main.95a7a5a2.js.map": "/runwithjohnny/static/js/main.95a7a5a2.js.map",
     "787.f069a600.chunk.js.map": "/runwithjohnny/static/js/787.f069a600.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.230654f6.css",
-    "static/js/main.1154a698.js"
+    "static/js/main.95a7a5a2.js"
   ]
 }
