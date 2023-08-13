@@ -1,7 +1,11 @@
 
 
 .bungeeFont {
-    font-family: 'Bungee Shade', cursive;
+    /* font-family: 'Bungee Shade', cursive; */
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+.bricolageFont {
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 
 .recursiveFont {
@@ -76,6 +80,11 @@
     object-fit: cover;
 }
 
+
+.my-spacing {
+    margin-top: 120px !important;
+    margin-bottom: 120px !important;
+}
 
 
 @media all and (max-width: 2600px) {
