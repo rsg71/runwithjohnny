@@ -60,7 +60,7 @@ export default function Home() {
                 <div>
                     <Row className="bg-black text-white mb-5 mt-md-5 recursiveFont" >
                         <Col sm={12} md={7} className="mb-4">
-                            <h1 style={{ fontSize: "3.5em", letterSpacing: ".05em" }} className="bricolageFont">Personalized Coaching</h1>
+                            <h1 style={{ fontSize: "3.5em" }} className="bricolageFont">Personalized Coaching</h1>
                             <p>Get coaching from a U.S. Olympic trials participant. I help you break PR's and get in your best shape ever.</p>
 
                             <div>
