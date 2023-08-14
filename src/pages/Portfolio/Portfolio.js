@@ -1,6 +1,5 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import Jumbotron from '../../components/Jumbotron/Jumbotron';
 import "./Portfolio.css";
 
 export default function Portfolio() {
@@ -8,9 +7,16 @@ export default function Portfolio() {
     return (
         <div className="bg-black text-white bricolageFont">
 
-            <Jumbotron title="Testimonials" />
+
 
             <Container fluid="md">
+
+                {/* <Jumbotron title="Testimonials" /> */}
+                <div>
+                    <div className="text-center py-5">
+                        <h1 className="display-4">Testimonials</h1>
+                    </div>
+                </div>
 
                 <Row>
 

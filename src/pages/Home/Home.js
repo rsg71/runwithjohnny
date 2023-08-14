@@ -85,12 +85,12 @@ export default function Home() {
                             <h2 className="bricolageFont">Run your Best</h2>
                             <p>Highlight the primary pain point your problem is solving</p>
 
-                            <p style={{ fontSize: 'smaller' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sint praesentium placeat fugiat quasi enim alias nulla earum. Voluptate numquam quia sint ducimus! Quod consectetur officia, quis dolorum quos nesciunt.</p>
+                            <p style={{ fontSize: 'smaller' }}>I'm a former D1 cross-country and track & field athlete from the University of Richmond. Currently living in Los Angeles. </p>
 
                             <ul>
-                                <li>✅ Item with example 1</li>
-                                <li>✅ Item with example 2</li>
-                                <li>✅ Item with example 3</li>
+                                <li>✅ 12 years of experience</li>
+                                <li>✅ Marathon PR of 2:19 <a href="https://worldathletics.org/athletes/united-states/johnny-hogue-14692819" target="_blank" rel="noreferrer" className="noUnderLine">Result </a></li>
+                                <li>✅ Sponsored by 2 track clubs</li>
                             </ul>
 
 
