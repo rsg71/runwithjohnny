@@ -50,13 +50,13 @@ export default function ContactForm() {
                     <Row>
                         <div className="contactEmailPhone">
                             <h1 className="recursiveFont"><i className="far fa-envelope"></i> Email:</h1>
-                            <a href="mailto:johnny.hogue3@gmail.com">johnny.hogue3@gmail.com</a>
+                            <a href="mailto:johnny.hogue3@gmail.com" className='noUnderLine'>johnny.hogue3@gmail.com</a>
                         </div>
                     </Row>
                     <Row>
                         <div className="contactEmailPhone">
                             <h1 className="recursiveFont"><i className="fas fa-phone-alt"></i> Phone: </h1>
-                            <a href="tel:2159137231"> (304) - 481 - 9397</a>
+                            <a href="tel:2159137231" className='noUnderLine'> (304) 481  9397</a>
                         </div>
                     </Row>
                 </Col>

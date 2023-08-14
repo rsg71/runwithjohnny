@@ -1,45 +1,79 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 // import { Link } from 'react-router-dom';
-import { InstagramIcon, LinkedInIcon } from '../Icons/Icons';
+import { EmailIcon, InstagramIcon } from '../Icons/Icons';
 import "./Footer.css"
 
 export default function Footer() {
+
+    // const myBorder = "border border-4 border-light ms-5"
+    // const myBorder = "ms-5";
+    const myBorder = "";
+
+    const email = 'johnnyhogue3@gmail.com'
+
+    const styles = {
+        header: "bricolageFont mb-2",
+        itemP: 'mb-3'
+    }
+
     return (
-        <div style={{ marginTop: "6rem" }}>
-            <div className="container-fluid fluidFooter mt-5" style={{ textAlign: "center" }}>
-                <Row>
-                    <Col sm={12} md={6}>
+        <div style={{ marginTop: "4rem" }}>
+            <div className="container-fluid fluidFooter mt-5 ">
+
+                <Row
+                    style={{ marginLeft: '20%', marginRight: '20%' }}
+                    className="pt-3 myFooterRow ps-3"
+                >
+                    <Col className={myBorder} sm={12} md={4}>
+
+                        <h5 className={styles.header}>Get in Touch</h5>
+                        <div className="text-secondary">
+                            <p className="mb-2">
+                                <i className="fas fa-phone-alt me-1" style={{ fontSize: 'inherit' }}></i> <a className="noUnderLine" href="tel:304.481.9397">+1 (304) 481 9397</a>
+                            </p>
+                            <p>
+                                <EmailIcon /> <a className="noUnderLine ms-1" href={`mailto:${email}`}>{email}</a>
+                            </p>
+                        </div>
+                    </Col>
+
+                    <Col className={myBorder} sm={12} md={4}>
                         <Row>
-                            <Col></Col>
                             <Col>
-                                <h5>Account Links</h5>
+                                <h5 className={styles.header}>Social</h5>
                                 <p>
-                                    <a className="noUnderLine" href="https://github.com/rsg71" target="_blank" rel="noreferrer">Instagram <InstagramIcon /></a>
+                                    <a className="noUnderLine" href="https://github.com/rsg71" target="_blank" rel="noreferrer"><InstagramIcon /> Instagram</a>
                                 </p>
-                                <p>
+                                {/* <p>
                                     <a className="noUnderLine" href="https://www.linkedin.com/in/robert-greenawalt/" target="_blank" rel="noreferrer">LinkedIn <LinkedInIcon /></a>
-                                </p>
+                                </p> */}
                             </Col>
                             <Col></Col>
                         </Row>
-
                     </Col>
 
-                    <Col sm={12} md={6}>
-                        <h5>Get in Touch</h5>
-                        <p><a className="noUnderLine" href="mailto:johnnyhogue3@gmail.com">
-                            johnnyhogue3@gmail.com</a></p>
+                    <Col className={myBorder} sm={12} md={4}>
+                        <h5 className={styles.header}>Get in Touch</h5>
+                        <p>
+                            <a className="noUnderLine" href={`mailto:${email}`}>{email}</a>
+                        </p>
                         <p><a className="noUnderLine" href="tel:304.481.9397">(304)-481-9397</a></p>
                     </Col>
                 </Row>
-                <Row>
-                    <Col>
-                        <div className="mb-0" style={{ color: 'grey' }}>
-                            &copy; Copyright 2023 Runwithjohnny.com
-                        </div>
-                    </Col>
-                </Row>
+
+
+                <hr style={{
+                    backgroundColor: '#fff',
+                    marginLeft: '20%',
+                    marginRight: '20%'
+                }}
+                />
+
+
+                <div className="pb-3 text-center bricolageFont text-secondary" >
+                    &copy; Copyright 2023 Runwithjohnny.com
+                </div>
             </div>
 
         </div>

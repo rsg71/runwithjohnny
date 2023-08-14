@@ -5,10 +5,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 // import ArmoryImage from ''
 import Testimonial from '../../components/Cards/Testimonial';
 import MyImageHolder from '../../components/MyImageHolder/MyImageHolder';
-import { ArmoryImage, MountainRunImage } from '../../components/Images';
+import {
+    //  ArmoryImage,
+      MountainRunImage, 
+      RaceOneImage, VidImage } from '../../components/Images/Images';
 import MosaicGrid from '../../components/MosaicGrid/MosaicGrid';
-import "./Home.css"
 import { useNavigate } from 'react-router-dom';
+// import theLogo from './run/bk_track.jpg';
+import "./Home.css"
 
 
 export const contactLink = "contact.html#/contact";
@@ -29,7 +33,7 @@ export default function Home() {
 
     const styles = {
         row: 'bg-black text-white mb-5 my-spacing recursiveFont',
-        row3_rows: 'bg-black text-white mb-5 my-spacing text-center recursiveFont'
+        row3_rows: 'bg-black text-white mb-5 text-center recursiveFont'
     }
 
     const navigate = useNavigate();
@@ -46,11 +50,17 @@ export default function Home() {
     )
 
     return (
-        <div className="bg-black animate__animated animate__fadeIn">
+        <div className="bg-black animate__animated animate__fadeIn mx-3">
+
+            {/* <h3>Here is the image:</h3>
+            <div className='p-3 border border-3 border-light'>
+
+                <img src={theLogo} alt="thing" />
+            </div> */}
 
             <Container>
                 <div>
-                    <Row className={styles.row} >
+                    <Row className="bg-black text-white mb-5 mt-md-5 recursiveFont" >
                         <Col sm={12} md={7} className="mb-4">
                             <h1 style={{ fontSize: "3.5em", letterSpacing: ".05em" }} className="bricolageFont">Personalized coaching</h1>
                             <p>Get coaching from a U.S. Olympic trials participant. I help you break PR's and get in your best shape ever.</p>
@@ -64,15 +74,17 @@ export default function Home() {
                         </Col>
                         <Col sm={12} md={5} className="pt-2">
                             <MountainRunImage />
+                            {/* <VidImage /> */}
                             {/* <RunImage /> */}
                         </Col>
                     </Row>
 
                     <Row className={styles.row} >
                         <Col sm={12} md={6} className="mb-4">
-                            <ArmoryImage />
+                            {/* <ArmoryImage /> */}
+                            <RaceOneImage />
                         </Col>
-                        <Col sm={12} md={6} className="pt-2">
+                        <Col sm={12} md={6} className="ps-md-5 pt-md-3">
                             <h2 className="bricolageFont">Run your best</h2>
                             <p>Highlight the primary pain point your problem is solving</p>
 
@@ -162,7 +174,7 @@ export default function Home() {
                     </div>
 
 
-                    <div className="my-5" style={{ marginTop: '50px', marginBottom: '50px' }}>
+                    <div className="my-5 homepageLastLink py-5" >
                         <Row className={styles.row3_rows} >
                             <Col>
                                 <h3 className="bricolageFont">Free training package</h3>

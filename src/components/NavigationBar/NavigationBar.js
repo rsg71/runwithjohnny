@@ -48,7 +48,7 @@ export default function NavigationBar() {
                             <Nav.Link as={Link} to="/" onClick={closeMenu} className={pathname === "/" ? selectedPageClass : notSelected}>
                                 Home
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/portfolio" onClick={closeMenu} className={pathname === "/portfolio" ? selectedPageClass : notSelected}>
+                            <Nav.Link as={Link} to="/testimonials" onClick={closeMenu} className={pathname === "/testimonials" ? selectedPageClass : notSelected}>
                                 Testimonials
                             </Nav.Link>
                             <Nav.Link as={Link} to="/about" onClick={closeMenu} className={pathname === "/about" ? selectedPageClass : notSelected}>

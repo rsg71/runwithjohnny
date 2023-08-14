@@ -80,11 +80,15 @@
     object-fit: cover;
 }
 
+/* New stuff */
 
 .my-spacing {
     margin-top: 120px !important;
-    margin-bottom: 120px !important;
+    /* margin-bottom: 120px !important; */
 }
+
+
+/* End new stuff */
 
 
 @media all and (max-width: 2600px) {

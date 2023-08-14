@@ -43,7 +43,7 @@ html, body {
 .jumbotron {
   border-radius: 0 !important;
   /* background-color:whitesmoke; */
-  background-image: url("../public/imgs/portfolio_background_colors_blue.jpg");
+  background-image: url("../public/images/portfolio_background_colors_blue.jpg");
   width: 100%;
   display: flex;
   justify-content: center;
@@ -81,6 +81,14 @@ a.noUnderLine {
     transform: rotate(360deg);
   }
 } */
+
+
+
+.homepageLastLink {
+  margin-top: 200px !important;
+  margin-bottom: 160px !important;
+}
+
 
 
 /* ============================================================== */
@@ -170,7 +178,10 @@ a.noUnderLine {
   #contactSubmitBtn, #contactSendingBtn, #contactSubmittedBtn {
     width: 100%;
     margin-bottom: 30%;
+  }
 
+  .myFooterRow {
+    margin-left: 0px !important;
   }
 
 }
