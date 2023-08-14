@@ -7,7 +7,7 @@ import {
     RaceOneImage,
 } from '../../components/Images/Images';
 import MosaicGrid from '../../components/MosaicGrid/MosaicGrid';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import PriceCard from '../../components/Cards/PriceCard';
 import "./Home.css"
 
@@ -33,14 +33,15 @@ export default function Home() {
         row3_rows: 'bg-black text-white mb-5 text-center recursiveFont'
     }
 
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
     // const history 
 
-    const goToLink = () => {
-        navigate()
-    }
+    // const goToLink = (url) => {
+        // navigate(url)
+        // window.location.href = url
+    // }
 
     const CTAButton = () => (
         <button className="btn btn-lg btn-success">Get started</button>
@@ -186,9 +187,11 @@ export default function Home() {
                                     />
                                 </div>
 
-                                <button className="btn btn-success" onClick={() => goToLink(htmlLinks.banditRunning)}>
-                                    Shop now
-                                </button>
+                                <form action={htmlLinks.banditRunning} method="get" target="_blank">
+                                    <button className="btn btn-success">
+                                        Shop now
+                                    </button>
+                                </form>
 
                             </Col>
                             <Col>
