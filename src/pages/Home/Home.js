@@ -1,17 +1,14 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-// import ProjectCard from '../../components/ProjectCard/ProjectCard';
-// import myProjects from '../../data/Projects';
-// import ArmoryImage from ''
 import Testimonial from '../../components/Cards/Testimonial';
 import MyImageHolder from '../../components/MyImageHolder/MyImageHolder';
 import {
-    //  ArmoryImage,
-      MountainRunImage, 
-      RaceOneImage, VidImage } from '../../components/Images/Images';
+    MountainRunImage,
+    RaceOneImage,
+} from '../../components/Images/Images';
 import MosaicGrid from '../../components/MosaicGrid/MosaicGrid';
 import { useNavigate } from 'react-router-dom';
-// import theLogo from './run/bk_track.jpg';
+import PriceCard from '../../components/Cards/PriceCard';
 import "./Home.css"
 
 
@@ -62,7 +59,7 @@ export default function Home() {
                 <div>
                     <Row className="bg-black text-white mb-5 mt-md-5 recursiveFont" >
                         <Col sm={12} md={7} className="mb-4">
-                            <h1 style={{ fontSize: "3.5em", letterSpacing: ".05em" }} className="bricolageFont">Personalized coaching</h1>
+                            <h1 style={{ fontSize: "3.5em", letterSpacing: ".05em" }} className="bricolageFont">Personalized Coaching</h1>
                             <p>Get coaching from a U.S. Olympic trials participant. I help you break PR's and get in your best shape ever.</p>
 
                             <div>
@@ -85,7 +82,7 @@ export default function Home() {
                             <RaceOneImage />
                         </Col>
                         <Col sm={12} md={6} className="ps-md-5 pt-md-3">
-                            <h2 className="bricolageFont">Run your best</h2>
+                            <h2 className="bricolageFont">Run your Best</h2>
                             <p>Highlight the primary pain point your problem is solving</p>
 
                             <p style={{ fontSize: 'smaller' }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci sint praesentium placeat fugiat quasi enim alias nulla earum. Voluptate numquam quia sint ducimus! Quod consectetur officia, quis dolorum quos nesciunt.</p>
@@ -99,6 +96,40 @@ export default function Home() {
 
                         </Col>
                     </Row>
+
+
+                    <div className="my-5" style={{ marginTop: '50px', marginBottom: '50px' }}>
+                        <Row className={styles.row3_rows} >
+                            <Col>
+                                <div className="mb-5">
+                                    <h3 className="bricolageFont">Training Plans</h3>
+                                    <p>Fit in your workouts with the best plan for you</p>
+                                </div>
+
+                                <div className="my-3 text-dark">
+                                    <Row>
+                                        <Col sm={12} md={6} className="mb-4">
+                                            <PriceCard
+                                                price={'100'}
+                                                packageName={"One-time Plan"}
+                                                planDescription={"Custom built training plan. I'll build a highly effective training plan to help you achieve your goals."}
+                                            />
+                                        </Col>
+                                        <Col sm={12} md={6} className="mb-4">
+                                            <PriceCard
+                                                price={'150'}
+                                                packageName={"Monthly Coaching"}
+                                                planDescription={'Personal coaching each month'}
+                                            />
+                                        </Col>
+                                    </Row>
+                                </div>
+
+                            </Col>
+                        </Row>
+                    </div>
+
+
 
 
                     <div className="my-5" style={{ marginTop: '50px', marginBottom: '50px' }}>
@@ -128,11 +159,13 @@ export default function Home() {
                     </div>
 
 
+
+
                     <div className="my-5">
                         <Row className={styles.row3_rows}>
                             <Col>
                                 <h3 className="bricolageFont">Events and Gallery</h3>
-                                <p>Events that I've participated in and other stuff</p>
+                                <p>Events that I've participated in and other media</p>
                             </Col>
                         </Row>
                         <MosaicGrid />
@@ -178,11 +211,11 @@ export default function Home() {
                         <Row className={styles.row3_rows} >
                             <Col>
                                 <h3 className="bricolageFont">Free training package</h3>
-                                <p>Let's get started to work together to run your best.</p>
+                                <p>First time customers get a 80% discount on their first training plan. <br /> Let's get started to work together to run your best.</p>
 
-                                <div className="my-3">
+                                <div className="my-3 mt-5">
                                     <button className="btn btn-success">
-                                        Get package
+                                        Get discounted plan
                                     </button>
                                     {/* <ArmoryImage /> */}
 
