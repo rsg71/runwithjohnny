@@ -4,7 +4,8 @@ import { Card } from 'react-bootstrap'
 export default function PriceCard({
     packageName,
     price,
-    planDescription
+    planDescription,
+    handleClick
 }) {
     return (
         <Card className="h-100">
@@ -19,14 +20,14 @@ export default function PriceCard({
                 <div className="mb-3">
                     {planDescription}
                 </div>
-                <button className="btn btn-success border">Book now</button>
+                <button className="btn btn-success border" onClick={handleClick}>Book now</button>
 
 
             </Card.Body>
             <Card.Footer>
-                <div className="text-small">
+                {/* <div className="text-small">
                     * 15% Discount available for 1<sup>st</sup> time clients
-                </div>
+                </div> */}
             </Card.Footer>
         </Card>
     )

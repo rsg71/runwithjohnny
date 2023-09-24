@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap'
 import {
     ArmoryImage, GlassesImage, MidRunImage,
     MountainRunImage, NumberSeventeenImage, RollercoasterEndImage,
-    RollercoasterStartImage, TrackImage, VidImage
+    RollercoasterStartImage, VidImage
 } from '../Images/Images'
 
 export default function MosaicGrid() {
@@ -21,7 +21,7 @@ export default function MosaicGrid() {
 
 
     return (
-        <div className="mx-5">
+        <div>
 
             <MyRow>
                 <Col md={8} className="mb-3">

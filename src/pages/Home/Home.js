@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Testimonial from '../../components/Cards/Testimonial';
 import MyImageHolder from '../../components/MyImageHolder/MyImageHolder';
-import {
-    MountainRunImage,
-    RaceOneImage,
-} from '../../components/Images/Images';
+import { MountainRunImage, RaceOneImage } from '../../components/Images/Images';
 import MosaicGrid from '../../components/MosaicGrid/MosaicGrid';
-// import { useNavigate } from 'react-router-dom';
 import PriceCard from '../../components/Cards/PriceCard';
 import "./Home.css"
+import BookingModal from '../../components/BookingModal/BookingModal';
 
 
 export const contactLink = "contact.html#/contact";
@@ -22,84 +19,68 @@ export const htmlLinks = {
 export default function Home() {
 
 
-    // const githubLink = "https://github.com/rsg71";
-    // const linkedInLink = "https://www.linkedin.com/in/robert-greenawalt/";
-    // const email = "mailto:johnnyhogue3@gmail.com";
-
-
-
     const styles = {
         row: 'bg-black text-white mb-5 my-spacing recursiveFont',
         row3_rows: 'bg-black text-white mb-5 text-center recursiveFont'
     }
 
-    // const navigate = useNavigate();
-
-
-    // const history 
-
-    // const goToLink = (url) => {
-        // navigate(url)
-        // window.location.href = url
-    // }
 
     const CTAButton = () => (
-        <button className="btn btn-lg btn-success">Get started</button>
-    )
+        <a href="#training-plans" className="btn btn-lg btn-success">Get started</a>
+    );
+
+    const [showOneTimePlanModal, setShowOneTimePlanModal] = useState(false);
+    const [showMonthlyCoachingModal, setShowMonthlyCoachingModal] = useState(false);
+
+    const toggleOneTimePlanModal = () => setShowOneTimePlanModal(!showOneTimePlanModal);
+    const toggleMonthlyCoachingModal = () => setShowMonthlyCoachingModal(!showMonthlyCoachingModal);
 
     return (
         <div className="bg-black animate__animated animate__fadeIn mx-3">
 
-            {/* <h3>Here is the image:</h3>
-            <div className='p-3 border border-3 border-light'>
-
-                <img src={theLogo} alt="thing" />
-            </div> */}
 
             <Container>
                 <div>
                     <Row className="bg-black text-white mb-5 mt-md-5 recursiveFont" >
                         <Col sm={12} md={7} className="mb-4">
                             <h1 style={{ fontSize: "3.5em" }} className="bricolageFont">Personalized Coaching</h1>
-                            <p>Get coaching from a U.S. Olympic trials participant. I help you break PR's and get in your best shape ever.</p>
+                            <p>Individual coaching for runners of all levels. Whether you're doing your first 5k or striving to run a new personal best, I will help you achieve your personal goals. I can't wait to start this journey together!</p>
 
                             <div>
                                 <CTAButton />
                                 <div className="mt-3">
-                                    <small>⭐⭐⭐⭐⭐ Over 10 clients and counting</small>
+                                    <small>⭐⭐⭐⭐⭐ Over 20 clients across the US and counting</small>
                                 </div>
                             </div>
                         </Col>
                         <Col sm={12} md={5} className="pt-2">
                             <MountainRunImage />
-                            {/* <VidImage /> */}
-                            {/* <RunImage /> */}
                         </Col>
                     </Row>
 
                     <Row className={styles.row} >
                         <Col sm={12} md={6} className="mb-4">
-                            {/* <ArmoryImage /> */}
                             <RaceOneImage />
                         </Col>
                         <Col sm={12} md={6} className="ps-md-5 pt-md-3">
-                            <h2 className="bricolageFont">Run your Best</h2>
-                            <p>Highlight the primary pain point your problem is solving</p>
 
-                            <p style={{ fontSize: 'smaller' }}>I'm a former D1 cross-country and track & field athlete from the University of Richmond. Currently living in Los Angeles. </p>
+                            <h2 className="bricolageFont">Run your Best</h2>
+                            <p>I have 15 years of competitive running experience, which includes everything from track & field to road racing and mountain running. I'm a former Division 1 cross country and track & field athlete.</p>
+
+                            <p>I'm currently living in Los Angeles, CA where I'm training for the US Olympic Trials in the Marathon.</p>
+
+                            <p>It's my goal to help everyone achieve their running goals regardless of experience. My athletes' successes are not defined simply by their 5k times. Run with Johnny to improve your overall fitness.</p>
 
                             <ul>
-                                <li>✅ 12 years of experience</li>
+                                <li>✅ 15 years of experience</li>
                                 <li>✅ Marathon PR of 2:19 <a href="https://worldathletics.org/athletes/united-states/johnny-hogue-14692819" target="_blank" rel="noreferrer" className="noUnderLine">Result </a></li>
-                                <li>✅ Sponsored by 2 track clubs</li>
                             </ul>
-
 
                         </Col>
                     </Row>
 
 
-                    <div className="my-5" style={{ marginTop: '50px', marginBottom: '50px' }}>
+                    <div className="my-5" style={{ marginTop: '50px', marginBottom: '50px' }} id="training-plans">
                         <Row className={styles.row3_rows} >
                             <Col>
                                 <div className="mb-5">
@@ -114,6 +95,7 @@ export default function Home() {
                                                 price={'100'}
                                                 packageName={"One-time Plan"}
                                                 planDescription={"Custom built training plan. I'll build a highly effective training plan to help you achieve your goals."}
+                                                handleClick={toggleOneTimePlanModal}
                                             />
                                         </Col>
                                         <Col sm={12} md={6} className="mb-4">
@@ -121,6 +103,7 @@ export default function Home() {
                                                 price={'150'}
                                                 packageName={"Monthly Coaching"}
                                                 planDescription={'Personal coaching each month'}
+                                                handleClick={toggleMonthlyCoachingModal}
                                             />
                                         </Col>
                                     </Row>
@@ -129,6 +112,25 @@ export default function Home() {
                             </Col>
                         </Row>
                     </div>
+
+                    {showOneTimePlanModal &&
+                        <BookingModal
+                            title="Book One Time Plan"
+                            show={showOneTimePlanModal}
+                            handleClose={() => setShowOneTimePlanModal(false)}
+                            bodyText="I would like to book a one time plan."
+                            btnText="Submit"
+                        />
+                    }
+                    {showMonthlyCoachingModal &&
+                        <BookingModal
+                            title="Book Monthly Coaching Plan"
+                            show={showMonthlyCoachingModal}
+                            handleClose={() => setShowMonthlyCoachingModal(false)}
+                            bodyText="I would like to book a monthly coaching plan."
+                            btnText="Submit"
+                        />
+                    }
 
 
 
@@ -209,23 +211,6 @@ export default function Home() {
                         </Row>
                     </div>
 
-
-                    <div className="my-5 homepageLastLink py-5" >
-                        <Row className={styles.row3_rows} >
-                            <Col>
-                                <h3 className="bricolageFont">Free training package</h3>
-                                <p>First time customers get a 80% discount on their first training plan. <br /> Let's get started to work together to run your best.</p>
-
-                                <div className="my-3 mt-5">
-                                    <button className="btn btn-success">
-                                        Get discounted plan
-                                    </button>
-                                    {/* <ArmoryImage /> */}
-
-                                </div>
-                            </Col>
-                        </Row>
-                    </div>
 
                 </div>
             </Container>

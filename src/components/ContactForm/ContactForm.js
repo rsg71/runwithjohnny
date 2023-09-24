@@ -16,13 +16,34 @@ export default function ContactForm() {
 
         setSending(true);
 
-        let serviceId = process.env.REACT_APP_SERVICE_ID
-        let templateId = process.env.REACT_APP_TEMPLATE_ID
-        let userId = process.env.REACT_APP_USER_ID
+        const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
+        const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+        const USER_ID = process.env.REACT_APP_USER_ID;
 
         // these IDs from the previous steps
 
-        emailjs.sendForm(serviceId, templateId, e.target, userId)
+        if (!SERVICE_ID) {
+            console.log('missing SERVICE_ID');
+            setSending(false);
+            setError(true);
+            return;
+        }
+
+        if (!TEMPLATE_ID) {
+            console.log('missing TEMPLATE_ID');
+            setSending(false);
+            setError(true);
+            return;
+        }
+
+        if (!USER_ID) {
+            console.log('missing USER_ID');
+            setSending(false);
+            setError(true);
+            return;
+        }
+
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
             .then((result) => {
                 console.log(result.text);
                 setSending(false);
@@ -67,7 +88,7 @@ export default function ContactForm() {
                             <div className="form-group">
                                 <input type="hidden" name="contact_number" />
                                 <label htmlFor="username">Your Name</label>
-                                <input name="user_name" type="text" className={sending ? sendingInputStyle : "form-control mb-2"} id="username" required disabled={sending} autoFocus />
+                                <input name="user_name" type="text" className={sending ? sendingInputStyle : "form-control mb-2"} id="username" required disabled={sending} />
                             </div>
 
                             <div className="form-group">
