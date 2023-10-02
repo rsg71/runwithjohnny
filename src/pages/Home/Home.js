@@ -5,8 +5,8 @@ import MyImageHolder from '../../components/MyImageHolder/MyImageHolder';
 import { MountainRunImage, RaceOneImage } from '../../components/Images/Images';
 import MosaicGrid from '../../components/MosaicGrid/MosaicGrid';
 import PriceCard from '../../components/Cards/PriceCard';
-import "./Home.css"
 import BookingModal from '../../components/BookingModal/BookingModal';
+import "./Home.css"
 
 
 export const contactLink = "contact.html#/contact";
@@ -41,10 +41,10 @@ export default function Home() {
 
             <Container>
                 <div>
-                    <Row className="bg-black text-white mb-5 mt-md-5 recursiveFont" >
+                    <Row className="bg-black text-white mb-5 mt-md-5 recursiveFont">
                         <Col sm={12} md={7} className="mb-4">
                             <h1 style={{ fontSize: "3.5em" }} className="bricolageFont">Personalized Coaching</h1>
-                            <p>Individual coaching for runners of all levels. Whether you're doing your first 5k or striving to run a new personal best, I will help you achieve your personal goals. I can't wait to start this journey together!</p>
+                            <p>Whether you're doing your first 5k or striving to run a new personal best, I'll help you achieve you goals.</p>
 
                             <div>
                                 <CTAButton />
@@ -58,7 +58,7 @@ export default function Home() {
                         </Col>
                     </Row>
 
-                    <Row className={styles.row} >
+                    <Row className={styles.row}>
                         <Col sm={12} md={6} className="mb-4">
                             <RaceOneImage />
                         </Col>
@@ -146,13 +146,13 @@ export default function Home() {
                                 <div className="my-3 text-dark">
                                     <Row>
                                         <Col sm={12} md={4} className="mb-4">
-                                            <Testimonial personName='Carter Kauffman' body='Guy is an absolute dog. TCR approves.' />
+                                            <Testimonial personName='Ryan D' body='Johnny was so helpful in creating a customized plan for my first half marathon' />
                                         </Col>
                                         <Col className="mb-4">
-                                            <Testimonial personName='Shiloh Smith' body='Went brazyy in WV with this head, never afraid of a challenge' />
+                                            <Testimonial personName='Rob G' body="I rely heavily on Johny for his personalized workouts. His experience as a runner has been invaluable." />
                                         </Col>
                                         <Col className="mb-4">
-                                            <Testimonial personName='Cruz Hayes' body='Always respectful and helps me when I fall down mud hills' />
+                                            <Testimonial personName='Garren H' body="Johnny helped me train for three 5k's and maintain general fitness" />
                                         </Col>
                                     </Row>
 
