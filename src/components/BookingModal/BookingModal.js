@@ -1,40 +1,41 @@
 import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { simulateNetworkRequest } from '../../utils/API';
+import emailjs from 'emailjs-com';
 
 function BookingModal({ title, show, handleClose, bodyText, btnText }) {
 
     const [isLoading, setIsLoading] = useState(false);
     const [isComplete, setIsComplete] = useState(false);
-
-    // const [formVals, setFormVals] = useState({
-    //     firstName: '',
-    //     lastName: '',
-    //     email: '',
-    //     phone: ''
-    // })
-
-
-    const submit = (e) => {
-        e.preventDefault();
-
-        // if (!firstName)
-
-
-        setIsLoading(true);
-
-        simulateNetworkRequest(500).then(() => {
-            setIsLoading(false);
-            setIsComplete(true);
-        })
-    }
+    const [error, setError] = useState(false);
 
     const styles = {
         formInput: 'form-control form-control-sm',
         formInputDiv: 'mb-2'
     }
 
+    const submit = (e) => {
+        e.preventDefault();
+
+        const serviceId = process.env.REACT_APP_SERVICE_ID;
+        const templateId = process.env.REACT_APP_TEMPLATE_ID;
+        const userId = process.env.REACT_APP_USER_ID;
+
+        setIsLoading(true);
+
+        emailjs.sendForm(serviceId, templateId, e.target, userId)
+            .then((result) => {
+                console.log(result.text);
+                setIsLoading(false);
+                setError(false);
+                setIsComplete(true);
+            }, (error) => {
+                setIsLoading(false);
+                setError(true);
+                setIsComplete(false);
+                console.log('error sending email: ', error.text);
+            });
+    }
 
 
     return (
@@ -48,32 +49,26 @@ function BookingModal({ title, show, handleClose, bodyText, btnText }) {
                 </Modal.Header>
                 <Modal.Body className="text-dark">
 
-                    {isComplete &&
-                        <div className="bg-success text-white p-3 mb-2">
-                            Booking request sent! ✅
-                        </div>
-                    }
-
                     <div className="mb-3">
                         <form id="booking-form" onSubmit={submit}>
                             <div className={styles.formInputDiv}>
                                 <label>Your first name</label>
-                                <input className={styles.formInput} required disabled={isLoading || isComplete} type="text" />
+                                <input name="first_name" className={styles.formInput} required disabled={isLoading || isComplete} type="text" />
                             </div>
 
                             <div className={styles.formInputDiv}>
                                 <label>Your last name</label>
-                                <input className={styles.formInput} required disabled={isLoading || isComplete} type="text" />
+                                <input name="last_name" className={styles.formInput} required disabled={isLoading || isComplete} type="text" />
                             </div>
 
                             <div className={styles.formInputDiv}>
                                 <label>Your email</label>
-                                <input className={styles.formInput} required disabled={isLoading || isComplete} type="email" />
+                                <input name="user_email" className={styles.formInput} required disabled={isLoading || isComplete} type="email" />
                             </div>
 
                             <div className={styles.formInputDiv}>
                                 <label>Your phone</label>
-                                <input className={styles.formInput} required disabled={isLoading || isComplete} type="text" minLength={10} maxLength={13} />
+                                <input name="user_phone" className={styles.formInput} required disabled={isLoading || isComplete} type="text" minLength={10} maxLength={13} />
                             </div>
 
 
@@ -82,11 +77,15 @@ function BookingModal({ title, show, handleClose, bodyText, btnText }) {
                                 <p>
                                     {bodyText}
                                 </p>
+                                <input name="bodyText" type="hidden" value={bodyText} />
                             </div>
 
                             <input type="submit" id="submit-form" className="hidden text-info" style={{ visibility: 'hidden' }} />
 
                         </form>
+
+                        {isComplete && <div className="p-5 greenBadge mt-3"> ✔ Message sent successfully </div>}
+                        {error && <div className="text-danger">There was an error submitting the form</div>}
                     </div>
 
 
