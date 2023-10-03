@@ -102,8 +102,8 @@ export default function ContactForm() {
                                 <textarea name="message" className={sending ? sendingInputStyle : "form-control mb-2"} id="usermessage" rows="3" required disabled={sending} ></textarea>
                             </div>
 
-                            <input type="hidden" name="_subject" value="Personal Portfolio Email" />
-                            <input type="hidden" name="_next" value="https://robertgreenawalt.com/contact.html" />
+                            <input type="hidden" name="_subject" value="Contact Page Email" />
+                            <input type="hidden" name="_next" value="https://runwithjohnny.com/contact" />
 
 
                             <button type="submit" className="btn btn-primary mt-2" id="contactSubmitBtn" value="Submit" disabled={sending}>
