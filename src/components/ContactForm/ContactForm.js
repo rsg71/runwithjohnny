@@ -17,7 +17,7 @@ export default function ContactForm() {
         setSending(true);
 
         const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-        const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
+        const TEMPLATE_ID = process.env.REACT_APP_CONTACT_PAGE_TEMPLATE_ID;
         const USER_ID = process.env.REACT_APP_USER_ID;
 
         // these IDs from the previous steps
