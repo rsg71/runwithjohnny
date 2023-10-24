@@ -10,7 +10,11 @@ export default function Footer() {
     // const myBorder = "ms-5";
     const myBorder = "";
 
-    const email = 'johnnyhogue3@gmail.com'
+    const email = 'johnnyhogue3@gmail.com';
+
+    const links = {
+        instagram: 'https://www.instagram.com/hoguejohnny/'
+    }
 
     const styles = {
         header: "bricolageFont mb-2",
@@ -43,7 +47,7 @@ export default function Footer() {
                             <Col>
                                 <h5 className={styles.header}>Social</h5>
                                 <p>
-                                    <a className="noUnderLine" href="https://github.com/rsg71" target="_blank" rel="noreferrer"><InstagramIcon /> Instagram</a>
+                                    <a className="noUnderLine" href={links.instagram} target="_blank" rel="noreferrer"><InstagramIcon /> Instagram</a>
                                 </p>
                                 {/* <p>
                                     <a className="noUnderLine" href="https://www.linkedin.com/in/robert-greenawalt/" target="_blank" rel="noreferrer">LinkedIn <LinkedInIcon /></a>

@@ -51,6 +51,10 @@ html, body {
   font-family: 'Bungee Shade', cursive;
 }
 
+.bricolageFont {
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+}
 
 .iamYam {
   font-family: 'Cormorant SC', serif;
@@ -89,6 +93,11 @@ a.noUnderLine {
   margin-bottom: 160px !important;
 }
 
+
+p, small, button, a {
+  /* font-family: 'Bricolage Grotesque', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+}
 
 
 /* ============================================================== */

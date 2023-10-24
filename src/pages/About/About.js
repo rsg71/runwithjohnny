@@ -4,8 +4,8 @@ import { Col, Row } from 'react-bootstrap'
 export default function About() {
 
     const styles = {
-        row: 'bg-black text-white my-5 my-spacing recursiveFont',
-        row3_rows: 'bg-black text-white my-5 my-spacing text-center recursiveFont',
+        row: 'bg-black text-white my-5 my-spacing',
+        row3_rows: 'bg-black text-white my-5 my-spacing text-center',
         par: 'mb-5'
     }
 

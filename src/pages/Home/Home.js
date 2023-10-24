@@ -20,13 +20,13 @@ export default function Home() {
 
 
     const styles = {
-        row: 'bg-black text-white mb-5 my-spacing recursiveFont',
-        row3_rows: 'bg-black text-white mb-5 text-center recursiveFont'
+        row: 'bg-black text-white mb-5 my-spacing bricolageFont',
+        row3_rows: 'bg-black text-white mb-5 text-center bricolageFont'
     }
 
 
     const CTAButton = () => (
-        <a href="#training-plans" className="btn btn-lg btn-success">Get started</a>
+        <a href="#training-plans" className="bricolageFont btn btn-lg btn-success">Get started</a>
     );
 
     const [showOneTimePlanModal, setShowOneTimePlanModal] = useState(false);
@@ -41,7 +41,7 @@ export default function Home() {
 
             <Container>
                 <div>
-                    <Row className="bg-black text-white mb-5 mt-md-5 recursiveFont">
+                    <Row className="bg-black text-white mb-5 mt-md-5">
                         <Col sm={12} md={7} className="mb-4">
                             <h1 style={{ fontSize: "3.5em" }} className="bricolageFont">Personalized Coaching</h1>
                             <p>Whether you're doing your first 5k or striving to run a new personal best, I'll help you achieve you goals.</p>
@@ -179,7 +179,7 @@ export default function Home() {
                     <div className="my-5" style={{ marginTop: '50px', marginBottom: '50px' }}>
                         <Row className={styles.row} >
                             <Col>
-                                <h3 className="bricolageFont">Shop</h3>
+                                <h3 className=" ">Shop</h3>
                                 <p>Check out apparel from my sponsor <a href={htmlLinks.banditRunning} target='_blank' rel='noreferrer'>BanditRunning</a></p>
 
 

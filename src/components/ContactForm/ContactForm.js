@@ -70,13 +70,13 @@ export default function ContactForm() {
                 <Col sm={12} lg={6} className="">
                     <Row>
                         <div className="contactEmailPhone">
-                            <h1 className="recursiveFont"><i className="far fa-envelope"></i> Email:</h1>
+                            <h1 className=""><i className="far fa-envelope"></i> Email:</h1>
                             <a href="mailto:johnny.hogue3@gmail.com" className='noUnderLine'>johnny.hogue3@gmail.com</a>
                         </div>
                     </Row>
                     <Row>
                         <div className="contactEmailPhone">
-                            <h1 className="recursiveFont"><i className="fas fa-phone-alt"></i> Phone: </h1>
+                            <h1 className=""><i className="fas fa-phone-alt"></i> Phone: </h1>
                             <a href="tel:2159137231" className='noUnderLine'> (304) 481  9397</a>
                         </div>
                     </Row>
