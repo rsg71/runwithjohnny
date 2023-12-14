@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.96a58f36.css",
-    "main.js": "/static/js/main.5cb61070.js",
+    "main.js": "/static/js/main.d4353dde.js",
     "static/js/787.f069a600.chunk.js": "/static/js/787.f069a600.chunk.js",
-    "static/media/vid.PNG": "/static/media/vid.099465cb37410ec1c3c4.PNG",
+    "static/media/vid2.PNG": "/static/media/vid2.8d28871e9abb6ef5df27.PNG",
     "static/media/armory.jpg": "/static/media/armory.50c08a1d8c12aa933bcf.jpg",
     "static/media/bk_track.jpg": "/static/media/bk_track.cf8fdce877fe8b9f7e69.jpg",
     "static/media/race_1.jpg": "/static/media/race_1.dedec64980c9c15a32ed.jpg",
@@ -12,14 +12,16 @@
     "static/media/glasses.jpg": "/static/media/glasses.9ddd77871d17fc4783f4.jpg",
     "static/media/number_17.JPEG": "/static/media/number_17.1a750ce3cfc3770fff05.JPEG",
     "static/media/richmond.jpg": "/static/media/richmond.9a42e33ba1635de9d98d.jpg",
+    "static/media/flag.jpg": "/static/media/flag.130c4974f5a920c8f255.jpg",
+    "static/media/elation.jpg": "/static/media/elation.d32635db6e7d51345c7d.jpg",
     "static/media/portfolio_background_colors_blue.jpg": "/static/media/portfolio_background_colors_blue.2d7871db892f90578f21.jpg",
     "index.html": "/index.html",
     "main.96a58f36.css.map": "/static/css/main.96a58f36.css.map",
-    "main.5cb61070.js.map": "/static/js/main.5cb61070.js.map",
+    "main.d4353dde.js.map": "/static/js/main.d4353dde.js.map",
     "787.f069a600.chunk.js.map": "/static/js/787.f069a600.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.96a58f36.css",
-    "static/js/main.5cb61070.js"
+    "static/js/main.d4353dde.js"
   ]
 }
