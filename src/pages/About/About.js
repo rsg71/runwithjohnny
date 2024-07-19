@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
+import { ElationImage } from '../../components/Images/Images'
 
 export default function About() {
 
@@ -12,7 +13,6 @@ export default function About() {
 
     return (
         <div>
-
             <Row className={styles.row}>
                 <Col xs={{ span: 11, offset: 1 }} md={{ span: 8, offset: 2 }}>
                     <div className="row animate__animated animate__fadeIn">
@@ -24,6 +24,9 @@ export default function About() {
                             <p className={styles.par}>To me, athletic success is defined by more than just numbers. I believe fitness is all-encompassing, so my personal coaching philosophy is rooted in consistency and putting health first. It is my goal to help all of my clients not only conquer their personal goals, but to achieve optimal health and feel great every step of the way.</p>
                         </div>
                     </div>
+
+                    <ElationImage />
+
                 </Col>
             </Row>
 

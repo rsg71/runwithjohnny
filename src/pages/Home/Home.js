@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Testimonial from '../../components/Cards/Testimonial';
 import MyImageHolder from '../../components/MyImageHolder/MyImageHolder';
-import { MountainRunImage, RaceOneImage } from '../../components/Images/Images';
+import { FlagImage, 
+    // MountainRunImage, 
+    RaceOneImage } from '../../components/Images/Images';
 import MosaicGrid from '../../components/MosaicGrid/MosaicGrid';
 import PriceCard from '../../components/Cards/PriceCard';
 import BookingModal from '../../components/BookingModal/BookingModal';
 import "./Home.css"
+// import video from '../../components/Images/run/CIM_JohnnyHogue.mp4'
 
 
 export const contactLink = "contact.html#/contact";
@@ -54,9 +57,21 @@ export default function Home() {
                             </div>
                         </Col>
                         <Col sm={12} md={5} className="pt-2">
-                            <MountainRunImage />
+                            <FlagImage />
+                            {/* <MountainRunImage /> */}
                         </Col>
                     </Row>
+
+
+                    {/* <Row>
+                        <Col>
+
+                            <video width="750" height="500" controls >
+                                <source src={video} type="video/mp4" />
+                            </video>
+
+                        </Col>
+                    </Row> */}
 
                     <Row className={styles.row}>
                         <Col sm={12} md={6} className="mb-4">
@@ -73,7 +88,9 @@ export default function Home() {
 
                             <ul>
                                 <li>✅ 15 years of experience</li>
-                                <li>✅ Marathon PR of 2:19 <a href="https://worldathletics.org/athletes/united-states/johnny-hogue-14692819" target="_blank" rel="noreferrer" className="noUnderLine">Result </a></li>
+                                <li>✅ Marathon PR of 2:17:40 <a href="https://www.usatf.org/events/2024/2024-u-s-olympic-team-trials-%e2%80%94-marathon/2024-u-s-olympic-team-trials-marathon-qualificatio/men-s-marathon-performances" target="_blank" rel="noreferrer" className="noUnderLine">Result </a></li>
+
+                                <li>✅ U.S. Olympic Trials Qualifier</li>
                             </ul>
 
                         </Col>
@@ -203,6 +220,28 @@ export default function Home() {
                                         <MyImageHolder
                                             url='https://banditrunning.com/cdn/shop/files/Frame_5_f18113cb-24a5-4789-8bc5-ac2a63786587_800x.png?v=1691760716'
                                         />
+                                    </div>
+
+
+                                </div>
+                            </Col>
+                        </Row>
+                    </div>
+
+
+                    <div className="my-5" style={{ marginTop: '50px', marginBottom: '50px' }}>
+                        <Row className={styles.row} >
+                            <Col>
+
+                                <div className="my-3">
+                                </div>
+
+                            </Col>
+                            <Col>
+                                <div className="">
+
+                                    <div>
+
                                     </div>
 
 

@@ -3,10 +3,12 @@ import richmondImage from './run/richmond.jpg';
 import bk_TrackImage from './run/bk_track.jpg';
 import race_one_image from './run/race_1.jpg';
 import glasses_image from './run/glasses.jpg';
-import vid_image from './run/vid.PNG';
+import vid_image from './run/vid2.PNG';
 import rollercoaster_start_image from './run/rollercoaster_start.jpg';
 import rollercoaster_end_image from './run/rollercoaster_end.jpg';
 import number_17_image from './run/number_17.JPEG';
+import flag_image from './run/flag.jpg';
+import elation from './run/elation.jpg';
 
 
 export const RunImage = () => (
@@ -109,6 +111,22 @@ export const RollercoasterEndImage = () => (
 export const NumberSeventeenImage = () => (
     <img
         src={number_17_image}
+        alt="thing"
+        style={{ borderRadius: '5px' }}
+    />
+)
+
+export const FlagImage = () => (
+    <img
+        src={flag_image}
+        alt="flag"
+        style={{ borderRadius: '5px' }}
+    />
+)
+
+export const ElationImage = () => (
+    <img
+        src={elation}
         alt="thing"
         style={{ borderRadius: '5px' }}
     />
