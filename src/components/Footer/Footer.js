@@ -23,6 +23,8 @@ export default function Footer() {
         itemP: 'mb-3'
     }
 
+    const year = (new Date().getFullYear()).toString();
+
     return (
         <div style={{ marginTop: "4rem" }}>
             <div className="container-fluid fluidFooter mt-5 ">
@@ -67,7 +69,7 @@ export default function Footer() {
 
 
                 <div className="pb-3 text-center bricolageFont text-secondary" >
-                    &copy; Copyright 2023 Runwithjohnny.com
+                    &copy; Copyright {year} Runwithjohnny.com
                 </div>
             </div>
 
